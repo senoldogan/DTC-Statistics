@@ -1,0 +1,34 @@
+Correlatin Matrix
+
+jmv::corrMatrix(
+    data = data,
+    vars = vars(CK+, CK+CD133+, CK+CD133+Her2+Ki67+, CK+CD133+Her2+Ki67+ER+, CK+CD133+Her2+Ki67+ER+Ncad+, Her2+, CK+Her2+, CK+Ki67+, CK+ER+, CK+NCad+, ER+NCad+, Her2+Ki67+, Ki67+ER+, CK+CD133+Ki67+, CD133+Her2+Ki67+, CK+Ki67+ER+, CK+Her2+NCad+, Her2+Ki67+ER+, CD133+Ki67+Ncad+, CK+Her2+ER+, Ki67+ER+Ncad+, CK+CD133+Ki67+Ncad+, CD133+Her2+Ki67+Ncad+, CD133+Ki67+ER+Ncad+, CK+CD133+Ki67+ER+, CD133+Her2+Ki67+ER+, CK+CD133+Her2+Ki67+Ncad+))
+
+
+
+jmv::corrMatrix(
+    data = data,
+    vars = vars(Alter Code, Subtyp, Tumorgröße, ER-Score),
+    flag = TRUE)
+
+Descriptive Statistics
+jmv::descriptives(
+    data = data,
+    vars = vars(Alter, Menopausalstatus, Subtyp, Tumorgröße, Ki67 in %, ER-Score, neoadjuvante Therapie, Her2 positiv),
+    n = FALSE,
+    missing = FALSE,
+    variance = TRUE,
+    range = TRUE,
+    se = TRUE,
+    ci = TRUE,
+    iqr = TRUE,
+    skew = TRUE,
+    kurt = TRUE,
+    sw = TRUE)
+
+
+Alluvial Diagrams
+ClinicoPathDescriptives::alluvial(
+    data = data,
+    vars = vars(Menopausalstatus, Tumorgröße, Alter Code, Tumorgröße),
+    condensationvar = )
